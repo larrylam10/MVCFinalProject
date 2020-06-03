@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Jun 03, 2020 at 10:15 AM
+-- Generation Time: Jun 03, 2020 at 03:10 PM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.12
 
@@ -35,11 +35,19 @@ CREATE TABLE IF NOT EXISTS `student` (
   `surname` varchar(100) NOT NULL,
   `gender` varchar(6) NOT NULL,
   `class` varchar(50) NOT NULL,
-  `email Address` varchar(50) DEFAULT NULL,
-  `mobile` varchar(10) NOT NULL,
+  `emailAddress` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `mobilenumber` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `address` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`ID`, `firstName`, `surname`, `gender`, `class`, `emailAddress`, `mobilenumber`, `address`) VALUES
+(1, 'Larry', 'Mukasa', 'Male', '2', 'Namutebihellen337@gmail.com', '0909090', 'popopo'),
+(2, 'John', 'Sse', 'Male', '4', 'j@gmail.com', '0703404040', '345');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
